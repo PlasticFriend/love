@@ -133,3 +133,9 @@ button {
         text-shadow: 2px 2px 20px rgba(255, 255, 255, 1);
     }
 }
+#no-button {
+    background-color: #888;
+    position: relative;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
