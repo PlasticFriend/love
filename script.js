@@ -21,8 +21,8 @@ function createHeart() {
     }, 5000); // Remove heart after 5 seconds
 }
 
-// Make "No" button move far away dynamically
-noButton.addEventListener('mouseenter', () => {
+// Function to move "No" button dynamically
+function moveNoButton() {
     const containerWidth = window.innerWidth;
     const containerHeight = window.innerHeight;
 
@@ -32,4 +32,8 @@ noButton.addEventListener('mouseenter', () => {
     noButton.style.position = 'absolute';
     noButton.style.left = `${randomX}px`;
     noButton.style.top = `${randomY}px`;
-});
+}
+
+// Add event listeners for mouse and touch events
+noButton.addEventListener('mouseenter', moveNoButton);
+noButton.addEventListener('touchstart', moveNoButton); // For mobile devices
